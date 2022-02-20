@@ -107,23 +107,30 @@ header {
     background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%);
   
   } */
+  .introduction-text{
+height: 10vh;
+width: 40vw;
+text-:wrap ;
+
+  
   h2 {
     position: relative;
     color: rgba(0, 0, 0, 0);
     font-size: 3rem;
     left: 10rem;
+    
   }
   h2::before {
-    content: attr(data-text);
+    content:( attr(data-text));
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
+    width: 10%;
     height: 100%;
     color: rgb(214, 211, 211);
     border-right: 4px solid #ff7200;
     overflow: hidden;
-    animation: animate 3s forwards;
+    animation: animate 6s forwards;
     white-space: nowrap;
   }
 
@@ -139,4 +146,5 @@ header {
       width: 100%;
     }
   }
+}
 }

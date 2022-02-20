@@ -14,26 +14,88 @@ header {
   display: flex;
   align-items: center;
   justify-content: left;
-  background: linear-gradient(/* to bottom, */ rgba(92, 77, 66, 0.5) 0%, rgba(92, 77, 66, 0.5) 100%), url(../../images/bg-masthead\ \(copy\).jpg);
+  background: linear-gradient(
+      to bottom,
+      rgba(92, 77, 66, 0.5) 0%,
+      rgba(92, 77, 66, 0.5) 100%
+    ),
+    url(../../images/bg-masthead\ .jpg);
 
-  div{
+  section {
     position: absolute;
-    top: 2%;
+    top: 0;
     right: 0;
-    width: 50vw;
+    width: 100vw;
     height: 10vh;
-   ul{
-     display: flex;
-     justify-content: space-around;
-     li{
-       font-size: 24px;
-       display: inline;
-       a{
-         text-decoration: none;
-         color: white;
-       }
-     }
-   } 
+    display: flex;
+    justify-content: space-between;
+     
+    .logo {
+      width: 5rem;
+      height: 5.5rem;
+      font-size: 3rem;
+      display: flex;
+      top: 0;
+      position: relative;
+      left: 2rem;
+      .t {
+        animation: t 1s linear forwards;
+
+        @keyframes t {
+          0% {
+            transform: rotatey(30deg) translateX(-50%);
+            color: #e6aa79;
+          }
+          50% {
+            transform: rotatey(90deg) rotatex(-90deg) translateX(-50%)
+              translateY(-10%);
+          }
+          100% {
+            transform: translateX(-110%) rotatex(-180deg) /* translateY(-20%) */;
+            color: #ff7200;
+            font-size: 5rem;
+           /*  position: relative;
+            top: 15%; */
+          }
+        }
+      }
+      .w {
+        animation: w 1s linear forwards;
+        @keyframes w {
+          0% {
+            transform: rotatey(30deg);
+            color: #e6aa79;
+          }
+          50% {
+            transform: rotatey(90deg);
+          }
+          100% {
+            font-size: 4rem;
+            color: #ff7200;
+          }
+        }
+      }
+    }
+  
+    .nav {
+      width: 60%;
+      position: absolute;
+      top: 20%;
+      right: 0;
+    }
+    ul {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      li {
+        font-size: 24px;
+        display: inline;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
   }
 
   /* img {

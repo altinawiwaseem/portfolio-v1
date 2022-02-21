@@ -3,3 +3,13 @@
 // @mixin name {
 //   // your rules
 // }
+@mixin anchor() {
+  text-decoration: none;
+  color: $font-color;
+  &:hover {
+    color: #ff7200 ;
+    
+    transition: 0.5s ease-in-out;
+     
+  }
+}

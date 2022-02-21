@@ -1,2 +1,7 @@
 //Font Imports
 //@include font-face("font name", "../fonts/font-dir-name", 300, $file-formats: ttf);
+
+    :root{
+       font-size: 16px; 
+    } 
+    $font-color: rgb(214, 211, 211); 

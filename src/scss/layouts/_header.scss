@@ -1,14 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  width: 100vw;
-  height: 100vh;
-  /* background-image: linear-gradient(to left, #122030, #203a43, #2c5364); */
-  color: whitesmoke;
-}
 header {
   height: 100vh;
   display: flex;
@@ -20,8 +9,9 @@ header {
       rgba(92, 77, 66, 0.5) 100%
     ),
     url(../../images/bg-masthead\ .jpg);
+  background-attachment: fixed;
 
-  section {
+  .nav-bar {
     position: absolute;
     top: 0;
     right: 0;
@@ -43,19 +33,18 @@ header {
 
         @keyframes t {
           0% {
-            transform: rotatey(30deg) translateX(-50%);
+            transform: translateX(-10%) rotatex(-30deg);
             color: #e6aa79;
           }
           50% {
-            transform: rotatey(90deg) rotatex(-90deg) translateX(-50%)
+            transform: translateX(-50%)rotatey(90deg) rotatex(-90deg) 
               translateY(-10%);
           }
           100% {
-            transform: translateX(-110%) rotatex(-180deg) /* translateY(-20%) */;
+            transform: translateX(-110%) rotatex(-180deg) ;
             color: #ff7200;
             font-size: 5rem;
-            /*  position: relative;
-            top: 15%; */
+            
           }
         }
       }
@@ -93,25 +82,21 @@ header {
         font-size: 24px;
         display: inline;
         a {
-          text-decoration: none;
-          color: white;
+          @include anchor;
         }
       }
     }
   }
-
-  /* img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%);
-  
-  } */
+  .introduction-text {
+    position: relative;
+    width: 40vw;
+  }
   h2 {
     position: relative;
     color: rgba(0, 0, 0, 0);
     font-size: 2rem;
     left: 10rem;
+    width: max-content;
   }
   h2::before {
     content: attr(data-text);
@@ -120,23 +105,24 @@ header {
     left: 0;
     width: 0;
     height: 100%;
-    color: rgb(214, 211, 211);
+    color: $font-color;
     border-right: 4px solid #ff7200;
     overflow: hidden;
-    animation: animate 5s steps(29) forwards;
+    animation: animate 2s steps(29) forwards;
     white-space: nowrap;
   }
 
   @keyframes animate {
-    0%,
-    10%,
-    100% {
-      width: 0;
-    }
-    70%,
-    90%,
-    100% {
+    to {
       width: 100%;
     }
+  }
+
+  h3 {
+    position: relative;
+    width: 73%;
+    left: 10rem;
+    margin-top: 1rem;
+    color: $my-color;
   }
 }

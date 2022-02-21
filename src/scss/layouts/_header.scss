@@ -90,6 +90,7 @@ header {
   .introduction-text {
     position: relative;
     width: 40vw;
+    text-align: center;
   }
   h2 {
     position: relative;
@@ -118,11 +119,5 @@ header {
     }
   }
 
-  h3 {
-    position: relative;
-    width: 73%;
-    left: 10rem;
-    margin-top: 1rem;
-    color: $my-color;
-  }
+  
 }

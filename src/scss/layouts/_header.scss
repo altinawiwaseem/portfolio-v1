@@ -1,5 +1,5 @@
 header {
-  height: 80vh;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -79,9 +79,10 @@ header {
       display: flex;
       justify-content: space-between;
       li {
-        font-size: 24px;
+        
         display: inline;
         a {
+          font-size: 1.5em;
           @include anchor;
         }
       }
@@ -93,10 +94,11 @@ header {
     text-align: center;
   }
   h2 {
+    
     position: relative;
     color: rgba(0, 0, 0, 0);
-    font-size: 2rem;
-    left: 10rem;
+    font-size: 1.5rem;
+    left: 10%;
     width: max-content;
   }
   h2::before {
@@ -111,6 +113,8 @@ header {
     overflow: hidden;
     animation: animate 2s steps(29) forwards;
     white-space: nowrap;
+    font-size: 1.5rem;
+    
   }
 
   @keyframes animate {

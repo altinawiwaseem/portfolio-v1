@@ -19,8 +19,8 @@
         <div class="nav">
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Works</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#work">Works</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#">Contact us</a></li>
           </ul>
         </div>
@@ -34,14 +34,14 @@
       </section>
     </header>
     <main>
-      <div class="main-text">
+      <div class="main-text" id="about">
         <h2>
           I am studying full stack web development at DCI institute. I expect to
           graduate at the end of 2022. <br />
           slowly but surely i'll become a web developer.
         </h2>
       </div>
-      <div class="container">
+      <div class="container" id="work">
         <div class="card">
           <a
             href="https://altinawiwaseem.github.io/menu-shapes/"
@@ -98,14 +98,46 @@
           <a
             href="https://altinawiwaseem.github.io/youtube-clone/"
             target="_blank"
-            ><img src="./images/youtube.clone.png" alt="Youtube Clone"
-          />
-          <div class="card-text">
-            <h3>Youtube Clone</h3>
-            <p>clone youtube layout</p>
-          </div>
-        </a>
+            ><img src="./images/youtube.clone.png" alt="Youtube Clone" />
+            <div class="card-text">
+              <h3>Youtube Clone</h3>
+              <p>clone youtube layout</p>
+            </div>
+          </a>
         </div>
+      </div>
+      <div class="form">
+        <fieldset>
+          <h1>Let's Get In Touch!</h1>
+          <form action="">
+            <div>
+              <input type="text" name="" id="name" placeholder=" " autocomplete="off" /><label
+                for="name"
+                >Full name</label
+              >
+            </div>
+            <div>
+              <input type="email" name="" id="email" placeholder=" " autocomplete="off"/>
+              <label for="email">Email address</label>
+            </div>
+            <div>
+              <input
+                type="number"
+                name=""
+                id="phone-number"
+                placeholder=" "
+                autocomplete="off"
+              /><label for="phone-number">Phone number</label>
+            </div>
+            <div>
+              <input type="text" name="" id="message" placeholder=" " autocomplete="off"/><label
+                for="message"
+                >Message</label
+              >
+            </div>
+            <div><button type="submit">Submit</button></div>
+          </form>
+        </fieldset>
       </div>
     </main>
     <footer></footer>

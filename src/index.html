@@ -21,7 +21,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#work">Works</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li><a href="#contact-us">Contact us</a></li>
           </ul>
         </div>
       </section>
@@ -106,11 +106,13 @@
           </a>
         </div>
       </div>
-      <div class="form">
+      <div class="form" id="contact-us">
         <fieldset>
           <h1>Soon will be available</h1>
           <form action="#">
+            <!-- section to contain the input boxes to control them without affecting the submit button and to position them flex to each other  -->
             <section class="form-container">
+              <!-- to design them together-->
               <article class="input-container">
                 <div>
                   <input
@@ -142,15 +144,15 @@
                 </div>
               </article>
               <article class="input-container">
-              <div class="message">
-                <input
-                  type="text"
-                  name=""
-                  id="message"
-                  placeholder=" "
-                  autocomplete="off"
-                /><label for="message">Message</label>
-              </div>
+                <div class="message">
+                  <input
+                    type="text"
+                    name=""
+                    id="message"
+                    placeholder=" "
+                    autocomplete="off"
+                  /><label for="message">Message</label>
+                </div>
               </article>
             </section>
             <button type="submit">Submit</button>

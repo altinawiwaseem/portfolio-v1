@@ -8,7 +8,6 @@
 body {
   width: 100vw;
   height: 100vh;
-
   color: whitesmoke;
   overflow-x: hidden;
 }
@@ -31,7 +30,7 @@ main {
       }
       to {
         clip-path: inset(0 0 0 0);
-        background-color: $bg-color;
+        background-color: $dark-color;
       }
     }
   }
@@ -54,7 +53,6 @@ main {
 
   .card {
     margin: 2rem 0;
-
     width: 39rem;
     height: 20rem;
     position: relative;
@@ -127,11 +125,36 @@ main {
   justify-content: center;
   align-items: center;
   background-color: $dark-color;
-  
+
   fieldset {
     position: relative;
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
+    border: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -0.7rem;
+      right: -0.7rem;
+
+      /* background-color: white; */
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -0.7rem;
+      bottom: -0.7rem;
+      left: 0rem;
+      right: 0rem;
+      border-right: 2px solid white;
+      border-left: 2px solid white;
+    }
+
     h1 {
       width: 100%;
       height: 10%;
@@ -143,6 +166,8 @@ main {
       height: 100%;
       width: 100%;
       position: relative;
+      z-index: 1;
+
       .form-container {
         display: flex;
         justify-content: space-evenly;
@@ -160,7 +185,6 @@ main {
         height: 100%;
         div {
           position: relative;
-          
         }
         label {
           position: absolute;
@@ -182,6 +206,7 @@ main {
           outline: none;
           color: $font-color;
           background-color: transparent;
+
           &:focus ~ label,
           &:not(:placeholder-shown) ~ label {
             position: absolute;
@@ -191,14 +216,13 @@ main {
           }
         }
       }
-       .message{
+      .message {
         position: relative;
         height: 80%;
         left: 50%;
         transform: translateX(-30%);
-        
-        
-        #message{
+
+        #message {
           height: 100%;
         }
       }

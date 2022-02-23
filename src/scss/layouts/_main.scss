@@ -50,10 +50,11 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   background-color: $my-color;
-  gap: 1rem;
+  gap: 1.5rem;
 
   .card {
-    margin-top: 2rem;
+    margin: 2rem 0;
+
     width: 39rem;
     height: 20rem;
     position: relative;
@@ -126,28 +127,41 @@ main {
   justify-content: center;
   align-items: center;
   background-color: $dark-color;
+  
   fieldset {
+    position: relative;
     width: 80%;
     height: 80%;
     h1 {
+      width: 100%;
+      height: 10%;
       text-align: center;
-      padding: 2rem;
+      padding-top: 1.5rem;
       color: $font-color;
     }
     form {
-      position: relative;
-      width: 100%;
       height: 100%;
-      display: flex;
-      gap: 5%;
-      flex-direction: column;
-      align-items: center;
-      div {
+      width: 100%;
+      position: relative;
+      .form-container {
         display: flex;
-        justify-content: center;
-        position: relative;
-        width: 50%;
-        height: 11%;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 80%;
+        padding: 3% 7%;
+      }
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        width: 100%;
+        height: 100%;
+        div {
+          position: relative;
+          
+        }
         label {
           position: absolute;
           font-size: 1.5rem;
@@ -159,11 +173,11 @@ main {
             font-size 200ms ease-in;
         }
         input {
-          padding-left: 2%;
-          width: 100%;
-          height: 100%;
-          border:2px $my-color solid;
-          border-radius: .5rem;
+          padding: 2%;
+          width: 80%;
+          height: 4rem;
+          border: 2px $my-color solid;
+          border-radius: 0.5rem;
           font-size: 1.2rem;
           outline: none;
           color: $font-color;
@@ -176,18 +190,18 @@ main {
             font-size: 1rem;
           }
         }
-button{
-  width: 100%;
-  border-radius: 5rem;
-  background-color: $my-color;
-  font-size: 1.5rem;
-  color: $font-color;
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
+      }
+       .message{
+        position: relative;
+        height: 80%;
+        left: 50%;
+        transform: translateX(-30%);
+        
+        
+        #message{
+          height: 100%;
+        }
       }
     }
-    
   }
 }

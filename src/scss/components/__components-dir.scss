@@ -1,1 +1,20 @@
 //Import Component files
+main {
+  form {
+    button {
+      width: 50%;
+      height: 10%;
+      position: relative;
+      left: 50%;
+      bottom: 5%;
+      transform: translateX(-50%);
+      border-radius: 5rem;
+      background-color: $my-color;
+      font-size: 1.5rem;
+      color: $font-color;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

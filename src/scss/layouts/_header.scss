@@ -37,14 +37,13 @@ header {
             color: #e6aa79;
           }
           50% {
-            transform: translateX(-50%)rotatey(90deg) rotatex(-90deg) 
+            transform: translateX(-50%) rotatey(90deg) rotatex(-90deg)
               translateY(-10%);
           }
           100% {
-            transform: translateX(-110%) rotatex(-180deg) ;
+            transform: translateX(-110%) rotatex(-180deg);
             color: #ff7200;
             font-size: 5rem;
-            
           }
         }
       }
@@ -79,7 +78,6 @@ header {
       display: flex;
       justify-content: space-between;
       li {
-        
         display: inline;
         a {
           font-size: 1.5em;
@@ -92,12 +90,62 @@ header {
     position: relative;
     width: 40vw;
     text-align: center;
+    height: 10vh;
+    left: 5%;
+    .hexagon {
+      width: 100px;
+      height: 57.735px;
+      background: #ff730080;
+      position: absolute;
+      left:1rem ;
+      z-index: 1;
+      animation: hexagon 120s linear infinite ;
+    }
+    .hexagon::before {
+      content: "";
+      position: absolute;
+      top: -28.8675px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 28.8675px solid #ff730080;
+      z-index: 1;
+    }
+    .hexagon::after {
+      content: "";
+      position: absolute;
+      bottom: -28.8675px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 28.8675px solid #ff730080;
+      z-index: 1;
+    }
+    @keyframes hexagon {
+      
+      100%{
+        transform: rotate(1turn);
+      }
+      
+    }
+    p {
+      position: absolute;
+      font-size: 1.3rem;
+      top: 100%;
+      left: 10%;
+      width: 27vw;
+      text-align: left;
+      color: $my-color;
+    }
   }
   h2 {
-    
     position: relative;
     color: rgba(0, 0, 0, 0);
-    font-size: 1.5rem;
+    font-size: 2rem;
     left: 10%;
     width: max-content;
   }
@@ -111,10 +159,9 @@ header {
     color: $font-color;
     border-right: 4px solid #ff7200;
     overflow: hidden;
-    animation: animate 2s steps(29) forwards;
+    animation: animate 2s steps(30) forwards;
     white-space: nowrap;
-    font-size: 1.5rem;
-    
+    font-size: 2.02rem;
   }
 
   @keyframes animate {
@@ -122,6 +169,4 @@ header {
       width: 102%;
     }
   }
-
-  
 }
